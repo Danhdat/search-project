@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-container: #1c1b1b;
+  --color-primary-fixed-dim: #c8c6c5;
+  --color-surface-tint: #5f5e5e;
+  --color-on-error-container: #93000a;
+  --color-secondary-fixed: #e2e3e1;
+  --color-on-tertiary-fixed: #261907;
+  --color-primary-fixed: #e5e2e1;
+  --color-on-error: #ffffff;
+  --color-secondary-container: #e2e3e1;
+  --color-on-tertiary-fixed-variant: #55442e;
+  --color-on-primary: #ffffff;
+  --color-tertiary-fixed: #f8dec1;
+  --color-on-background: #1b1c1c;
+  --color-background: #fbf9f9;
+  --color-secondary: #5d5f5d;
+  --color-surface-dim: #dbdad9;
+  --color-surface-bright: #fbf9f9;
+  --color-surface-container-highest: #e4e2e2;
+  --color-surface-container-high: #e9e8e7;
+  --color-primary: #000000;
+  --color-on-primary-fixed: #1c1b1b;
+  --color-tertiary: #000000;
+  --color-inverse-surface: #303031;
+  --color-surface: #fbf9f9;
+  --color-on-secondary-fixed-variant: #454746;
+  --color-on-primary-fixed-variant: #474746;
+  --color-on-secondary-fixed: #1a1c1b;
+  --color-error: #ba1a1a;
+  --color-on-secondary-container: #636563;
+  --color-on-secondary: #ffffff;
+  --color-surface-container-low: #f5f3f3;
+  --color-inverse-on-surface: #f2f0f0;
+  --color-outline: #747878;
+  --color-on-tertiary: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-outline-variant: #c4c7c7;
+  --color-secondary-fixed-dim: #c6c7c5;
+  --color-on-tertiary-container: #958067;
+  --color-on-primary-container: #858383;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface-variant: #444748;
+  --color-tertiary-container: #261907;
+  --color-on-surface: #1b1c1c;
+  --color-surface-container: #efeded;
+  --color-tertiary-fixed-dim: #dbc3a6;
+  --color-inverse-primary: #c8c6c5;
+  --color-surface-variant: #e4e2e2;
+
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+
+  --spacing-container-max: 1440px;
+  --spacing-margin-mobile: 20px;
+  --spacing-margin-desktop: 64px;
+  --spacing-gutter: 32px;
+  --spacing-stack-sm: 12px;
+  --spacing-stack-md: 24px;
+  --spacing-stack-lg: 48px;
+
+  --font-headline-md: var(--font-playfair), serif;
+  --font-headline-sm: var(--font-playfair), serif;
+  --font-display-lg: var(--font-playfair), serif;
+  --font-display-lg-mobile: var(--font-playfair), serif;
+  --font-body-lg: var(--font-hanken), sans-serif;
+  --font-body-md: var(--font-hanken), sans-serif;
+  --font-label-sm: var(--font-hanken), sans-serif;
+
+  --text-headline-md: 32px;
+  --text-headline-md--line-height: 1.3;
+  --text-headline-md--font-weight: 500;
+
+  --text-headline-sm: 24px;
+  --text-headline-sm--line-height: 1.4;
+  --text-headline-sm--font-weight: 500;
+
+  --text-display-lg: 48px;
+  --text-display-lg--line-height: 1.1;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 600;
+
+  --text-display-lg-mobile: 32px;
+  --text-display-lg-mobile--line-height: 1.2;
+  --text-display-lg-mobile--font-weight: 600;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 1.6;
+  --text-body-lg--letter-spacing: 0.01em;
+  --text-body-lg--font-weight: 400;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 1.6;
+  --text-body-md--font-weight: 400;
+
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 1;
+  --text-label-sm--letter-spacing: 0.1em;
+  --text-label-sm--font-weight: 600;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
+}
+
+.upload-dashed {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23C4C7C7' stroke-width='1' stroke-dasharray='8%2c 12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.upload-dashed:hover {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23000000' stroke-width='1' stroke-dasharray='8%2c 12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.asymmetric-image-border {
+  border: 1px solid rgba(28, 27, 27, 0.1);
+}
+
+.reveal-up {
+  animation: revealUp 0.8s ease-out forwards;
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+}

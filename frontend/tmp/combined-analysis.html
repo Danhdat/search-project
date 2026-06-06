@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MODA SENSE | Fashion Analysis</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#1c1b1b",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "surface-tint": "#5f5e5e",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#e2e3e1",
+                    "on-tertiary-fixed": "#261907",
+                    "primary-fixed": "#e5e2e1",
+                    "on-error": "#ffffff",
+                    "secondary-container": "#e2e3e1",
+                    "on-tertiary-fixed-variant": "#55442e",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#f8dec1",
+                    "on-background": "#1b1c1c",
+                    "background": "#fbf9f9",
+                    "secondary": "#5d5f5d",
+                    "surface-dim": "#dbdad9",
+                    "surface-bright": "#fbf9f9",
+                    "surface-container-highest": "#e4e2e2",
+                    "surface-container-high": "#e9e8e7",
+                    "primary": "#000000",
+                    "on-primary-fixed": "#1c1b1b",
+                    "tertiary": "#000000",
+                    "inverse-surface": "#303031",
+                    "surface": "#fbf9f9",
+                    "on-secondary-fixed-variant": "#454746",
+                    "on-primary-fixed-variant": "#474746",
+                    "on-secondary-fixed": "#1a1c1b",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#636563",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f5f3f3",
+                    "inverse-on-surface": "#f2f0f0",
+                    "outline": "#747878",
+                    "on-tertiary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "outline-variant": "#c4c7c7",
+                    "secondary-fixed-dim": "#c6c7c5",
+                    "on-tertiary-container": "#958067",
+                    "on-primary-container": "#858383",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface-variant": "#444748",
+                    "tertiary-container": "#261907",
+                    "on-surface": "#1b1c1c",
+                    "surface-container": "#efeded",
+                    "tertiary-fixed-dim": "#dbc3a6",
+                    "inverse-primary": "#c8c6c5",
+                    "surface-variant": "#e4e2e2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1440px",
+                    "margin-mobile": "20px",
+                    "unit": "4px",
+                    "gutter": "32px",
+                    "margin-desktop": "64px",
+                    "stack-sm": "12px",
+                    "stack-lg": "48px",
+                    "stack-md": "24px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Playfair Display"],
+                    "label-sm": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "headline-sm": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                    "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                    "display-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                    "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                    "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                    "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                    "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        .upload-dashed {
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23C4C7C7' stroke-width='1' stroke-dasharray='8%2c 12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+        }
+        .upload-dashed:hover {
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23000000' stroke-width='1' stroke-dasharray='8%2c 12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+        }
+        .asymmetric-image-border {
+            border: 1px solid rgba(28, 27, 27, 0.1);
+        }
+        .reveal-up { animation: revealUp 0.8s ease-out forwards; }
+        @keyframes revealUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col font-body-md selection:bg-primary-fixed-dim">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline sticky top-0 z-50 docked full-width">
+<nav class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<div class="text-headline-sm font-headline-sm font-semibold tracking-tighter text-primary dark:text-primary-fixed">
+                MODA SENSE
+            </div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="text-on-surface-variant dark:text-surface-variant text-label-sm font-label-sm hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Curate</a>
+<a class="text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1 text-label-sm font-label-sm transition-opacity opacity-70" href="#">Analyze</a>
+<a class="text-on-surface-variant dark:text-surface-variant text-label-sm font-label-sm hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Archive</a>
+</div>
+<div class="flex items-center">
+<button class="p-2 hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</nav>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full">
+<!-- Hero: Upload Section -->
+<section class="flex flex-col items-center justify-center px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto w-full">
+<div class="w-full max-w-4xl text-center mb-stack-lg">
+<span class="text-label-sm font-label-sm text-outline tracking-[0.2em] uppercase block mb-stack-sm">Intelligent Curation</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-stack-sm">Upload for Analysis</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Our AI-driven engine dissects silhouettes, textile textures, and cultural relevance to provide editorial-grade insights.
+                </p>
+</div>
+<!-- Upload Zone -->
+<div class="w-full max-w-4xl aspect-[16/9] md:aspect-[21/9] bg-surface-container-lowest upload-dashed transition-all duration-500 flex flex-col items-center justify-center cursor-pointer group relative" id="drop-zone">
+<input accept="image/*" class="hidden" id="file-input" type="file"/>
+<div class="flex flex-col items-center transition-transform duration-500 group-hover:-translate-y-2">
+<div class="w-16 h-16 rounded-full border border-outline-variant flex items-center justify-center mb-stack-md group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-outline group-hover:text-primary" data-icon="add_photo_alternate">add_photo_alternate</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-2">Drag &amp; Drop Imagery</p>
+<p class="font-body-md text-body-md text-outline">or click to browse archives</p>
+</div>
+<!-- Preview Image -->
+<div class="absolute inset-0 bg-surface z-10 hidden p-stack-sm" id="preview-container">
+<div class="w-full h-full relative overflow-hidden border border-outline-variant">
+<img alt="" class="w-full h-full object-contain" id="preview-img" src=""/>
+<button class="absolute top-4 right-4 bg-primary text-on-primary w-10 h-10 flex items-center justify-center hover:bg-on-surface-variant transition-colors" id="remove-img">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Action Bar -->
+<div class="w-full max-w-4xl flex flex-col md:flex-row items-center justify-between mt-stack-md gap-stack-md">
+<div class="flex items-center space-x-4">
+<div class="px-4 py-2 bg-surface-container-high border border-outline-variant text-label-sm font-label-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="info">info</span>
+                        MAX FILE SIZE: 25MB
+                    </div>
+<div class="px-4 py-2 bg-surface-container-high border border-outline-variant text-label-sm font-label-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="check_circle">check_circle</span>
+                        HI-RES RECOMMENDED
+                    </div>
+</div>
+<button class="w-full md:w-auto px-12 py-5 bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-widest hover:bg-on-surface-variant transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed" id="analyze-btn">
+                    Analyze Composition
+                </button>
+</div>
+</section>
+<!-- Analysis Results Section (From Screen 3) -->
+<div class="hidden space-y-0" id="results-area">
+<!-- Product Showcase -->
+<section class="max-w-container-max mx-auto px-margin-desktop py-stack-lg border-t border-outline-variant grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-5 flex flex-col justify-center order-2 md:order-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant mb-4 tracking-widest uppercase">Analysis Result</span>
+<h2 class="text-display-lg font-display-lg text-primary mb-6 leading-tight">Balenciaga Hourglass Mini</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-8 max-w-md">
+                        A sculpturally precise interpretation of classic couture silhouettes, now reimagined in a luminous pink glitter finish. 
+                        This item represents the pinnacle of contemporary avant-garde luxury.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 text-label-sm font-label-sm uppercase tracking-widest hover:bg-surface-tint transition-all">
+                            Request Report
+                        </button>
+<button class="border border-primary text-primary px-8 py-4 text-label-sm font-label-sm uppercase tracking-widest hover:bg-surface-container-low transition-all">
+                            Save to Archive
+                        </button>
+</div>
+</div>
+<div class="md:col-span-7 order-1 md:order-2">
+<div class="relative aspect-[4/5] bg-surface-container-lowest asymmetric-image-border overflow-hidden p-8 group">
+<img alt="Balenciaga Bag" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNxLWqRAtDx3yh-lbdToepU0ZpHy7ojpnAUDKw6IjzjpkK8xmGhX5G7aKY4tUANnzS5CUm4LSgNbuAKRSjfmx5PfkLxKASRhdSuWWL-cVc272-Asja6y5dyPR9MnF5NGMYyj52kS9toDk5BubCVpfcvBMh3mTqEo_FF--1aJIYRldf-gC0LU5V2_cdrP3GAG40UL_VVWi7do2z50G0EiTlxAKVmlyehq2vbSSJYf9OByI36ShsQ-ReXYE6TyU3o-XU8FsySI7vJTA"/>
+</div>
+</div>
+</section>
+<!-- Metadata Cards -->
+<section class="bg-surface-container-low py-stack-lg border-y border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="flex flex-col gap-2">
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase">Brand</span>
+<span class="text-headline-sm font-headline-sm text-primary">Balenciaga</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase">Colorway</span>
+<span class="text-headline-sm font-headline-sm text-primary">Pink Glitter</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase">Composition</span>
+<span class="text-headline-sm font-headline-sm text-primary">Glitter Leather</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase">Classification</span>
+<span class="text-headline-sm font-headline-sm text-primary">Handbag</span>
+</div>
+</div>
+</section>
+<!-- Tag Clouds -->
+<section class="max-w-container-max mx-auto px-margin-desktop py-stack-lg">
+<div class="flex flex-col md:flex-row gap-16">
+<div class="flex-1">
+<h3 class="text-headline-sm font-headline-sm mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">search</span>
+                            Search Keywords
+                        </h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-surface border border-outline-variant text-label-sm font-label-sm rounded hover:border-primary cursor-pointer transition-colors">sculptural-bag</span>
+<span class="px-4 py-2 bg-surface border border-outline-variant text-label-sm font-label-sm rounded hover:border-primary cursor-pointer transition-colors">y2k-luxury</span>
+<span class="px-4 py-2 bg-surface border border-outline-variant text-label-sm font-label-sm rounded hover:border-primary cursor-pointer transition-colors">metallic-mini</span>
+<span class="px-4 py-2 bg-surface border border-outline-variant text-label-sm font-label-sm rounded hover:border-primary cursor-pointer transition-colors">maximalist-accessory</span>
+</div>
+</div>
+<div class="flex-1">
+<h3 class="text-headline-sm font-headline-sm mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+                            Similar Styles
+                        </h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-surface border border-outline-variant text-label-sm font-label-sm rounded hover:border-primary cursor-pointer transition-colors">curved-silhouette</span>
+<span class="px-4 py-2 bg-surface border border-outline-variant text-label-sm font-label-sm rounded hover:border-primary cursor-pointer transition-colors">evening-mini</span>
+<span class="px-4 py-2 bg-surface border border-outline-variant text-label-sm font-label-sm rounded hover:border-primary cursor-pointer transition-colors">textured-leather</span>
+<span class="px-4 py-2 bg-surface border border-outline-variant text-label-sm font-label-sm rounded hover:border-primary cursor-pointer transition-colors">statement-pink</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Marketplace -->
+<section class="max-w-container-max mx-auto px-margin-desktop py-stack-lg border-t border-outline-variant">
+<div class="flex justify-between items-end mb-12">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant mb-2 block uppercase">Market Availability</span>
+<h2 class="text-headline-md font-headline-md text-primary">Where to Buy</h2>
+</div>
+<div class="text-on-surface-variant text-label-sm font-label-sm">
+                        5 Active Listings Found
+                    </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+<div class="group bg-surface-container-lowest border border-outline-variant p-6 hover:border-primary transition-all duration-300 flex flex-col justify-between aspect-square">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase mb-4 block">Official</span>
+<h4 class="text-headline-sm font-headline-sm mb-2">Balenciaga</h4>
+</div>
+<a class="flex items-center justify-between text-label-sm font-label-sm uppercase tracking-widest text-primary group-hover:translate-x-1 transition-transform" href="#">Shop Store <span class="material-symbols-outlined">north_east</span></a>
+</div>
+<div class="group bg-surface-container-lowest border border-outline-variant p-6 hover:border-primary transition-all duration-300 flex flex-col justify-between aspect-square">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase mb-4 block">Curated</span>
+<h4 class="text-headline-sm font-headline-sm mb-2">SSENSE</h4>
+</div>
+<a class="flex items-center justify-between text-label-sm font-label-sm uppercase tracking-widest text-primary group-hover:translate-x-1 transition-transform" href="#">Shop SSENSE <span class="material-symbols-outlined">north_east</span></a>
+</div>
+<div class="group bg-surface-container-lowest border border-outline-variant p-6 hover:border-primary transition-all duration-300 flex flex-col justify-between aspect-square">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase mb-4 block">Luxury</span>
+<h4 class="text-headline-sm font-headline-sm mb-2">Net-A-Porter</h4>
+</div>
+<a class="flex items-center justify-between text-label-sm font-label-sm uppercase tracking-widest text-primary group-hover:translate-x-1 transition-transform" href="#">Shop NAP <span class="material-symbols-outlined">north_east</span></a>
+</div>
+<div class="group bg-surface-container-lowest border border-outline-variant p-6 hover:border-primary transition-all duration-300 flex flex-col justify-between aspect-square">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase mb-4 block">Global</span>
+<h4 class="text-headline-sm font-headline-sm mb-2">Farfetch</h4>
+</div>
+<a class="flex items-center justify-between text-label-sm font-label-sm uppercase tracking-widest text-primary group-hover:translate-x-1 transition-transform" href="#">Shop Global <span class="material-symbols-outlined">north_east</span></a>
+</div>
+<div class="group bg-surface-container-lowest border border-outline-variant p-6 hover:border-primary transition-all duration-300 flex flex-col justify-between aspect-square">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase mb-4 block">European</span>
+<h4 class="text-headline-sm font-headline-sm mb-2">MyTheresa</h4>
+</div>
+<a class="flex items-center justify-between text-label-sm font-label-sm uppercase tracking-widest text-primary group-hover:translate-x-1 transition-transform" href="#">Shop MyTheresa <span class="material-symbols-outlined">north_east</span></a>
+</div>
+</div>
+</section>
+<!-- Trend Insight -->
+<section class="max-w-container-max mx-auto px-margin-desktop py-stack-lg flex flex-col md:flex-row items-center gap-12 border-t border-outline-variant">
+<div class="flex-1 space-y-6">
+<h2 class="text-headline-md font-headline-md">The Analysis Perspective</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                        Our AI-driven sentiment analysis suggests a 14% growth in "Sculptural Minimalism" within the handbag category this quarter. 
+                        Items like the Hourglass Mini are leading the transition from soft hobo bags to architectural statements.
+                    </p>
+<div class="pt-4">
+<button class="text-label-sm font-label-sm uppercase tracking-widest border-b border-primary pb-1 hover:opacity-60 transition-opacity">
+                            Read Full Market Trend Report
+                        </button>
+</div>
+</div>
+<div class="flex-1 bg-surface-container p-12 w-full">
+<div class="aspect-video bg-white overflow-hidden asymmetric-image-border relative">
+<img alt="Trend Analysis" class="w-full h-full object-cover grayscale opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKzaoR8p3ThuicZ4Azd6yGRuNWnleN6d8fIuAw30qoe1fxylrDNBMs0WabJFsubJnqi8VUxtnrbfyTLNy0E0fZNUQX2bYRQNtwVccXZsdc_mFyxKxuQMcB_ahdsIg7p-sHifKBwoSJMdRz2DUvfS5oSGttbYcH8kJpYZPWcUcKVuJczXD5T8U5IRlsbd-kySn39faHE3W9FUI1_-Jq6F9b_VBiYjN7cXsAGmqBLc4xppQjrNN5Kea6HbDQeJWu5YZfsUG2sjDYmzM"/>
+</div>
+</div>
+</section>
+</div>
+<!-- Summary: Feature section (Preserved from Screen 5) -->
+<section class="bg-surface-container-low border-t border-outline-variant mt-stack-lg">
+<div class="max-w-container-max mx-auto px-margin-desktop py-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="space-y-stack-sm">
+<h3 class="font-headline-sm text-headline-sm italic">01. Silhouette</h3>
+<p class="text-body-md text-on-surface-variant">Instant detection of garment geometry and structural form factors across historical eras.</p>
+</div>
+<div class="space-y-stack-sm">
+<h3 class="font-headline-sm text-headline-sm italic">02. Palette</h3>
+<p class="text-body-md text-on-surface-variant">Chromatographic breakdown of primary, secondary, and accent tones using industry-standard pantones.</p>
+</div>
+<div class="space-y-stack-sm">
+<h3 class="font-headline-sm text-headline-sm italic">03. Narrative</h3>
+<p class="text-body-md text-on-surface-variant">Contextual mapping to current market trends, runway heritage, and emerging street aesthetics.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface dark:bg-primary-container border-t border-outline-variant dark:border-outline">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div class="mb-stack-md md:mb-0">
+<span class="text-headline-sm font-headline-sm text-primary dark:text-primary-fixed">MODA SENSE</span>
+</div>
+<div class="flex flex-col items-center md:items-end space-y-4">
+<div class="flex space-x-8">
+<a class="text-on-surface-variant dark:text-surface-variant text-label-sm font-label-sm hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Privacy</a>
+<a class="text-on-surface-variant dark:text-surface-variant text-label-sm font-label-sm hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Terms</a>
+<a class="text-on-surface-variant dark:text-surface-variant text-label-sm font-label-sm hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Editorial Policy</a>
+<a class="text-on-surface-variant dark:text-surface-variant text-label-sm font-label-sm hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Support</a>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant dark:text-surface-variant">
+                    © 2024 MODA SENSE. ALL RIGHTS RESERVED.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+        const previewContainer = document.getElementById('preview-container');
+        const previewImg = document.getElementById('preview-img');
+        const removeImgBtn = document.getElementById('remove-img');
+        const analyzeBtn = document.getElementById('analyze-btn');
+        const resultsArea = document.getElementById('results-area');
+
+        // Drag and drop events
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('bg-surface-container-high');
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('bg-surface-container-high');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('bg-surface-container-high');
+            const file = e.dataTransfer.files[0];
+            if (file && file.type.startsWith('image/')) {
+                handleFile(file);
+            }
+        });
+
+        dropZone.addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                handleFile(file);
+            }
+        });
+
+        function handleFile(file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                previewImg.src = e.target.result;
+                previewContainer.classList.remove('hidden');
+                analyzeBtn.disabled = false;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        removeImgBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            previewContainer.classList.add('hidden');
+            previewImg.src = '';
+            fileInput.value = '';
+            analyzeBtn.disabled = true;
+            resultsArea.classList.add('hidden');
+        });
+
+        analyzeBtn.addEventListener('click', () => {
+            if (analyzeBtn.disabled) return;
+            
+            const originalText = analyzeBtn.textContent;
+            analyzeBtn.textContent = 'Analyzing Metadata...';
+            analyzeBtn.disabled = true;
+            
+            // Interaction to show results
+            setTimeout(() => {
+                analyzeBtn.textContent = 'Analysis Complete';
+                analyzeBtn.classList.remove('bg-primary');
+                analyzeBtn.classList.add('bg-on-tertiary-container', 'text-white');
+                
+                resultsArea.classList.remove('hidden');
+                resultsArea.scrollIntoView({ behavior: 'smooth' });
+                
+                // Re-enable button after show
+                setTimeout(() => {
+                    analyzeBtn.textContent = originalText;
+                    analyzeBtn.disabled = false;
+                    analyzeBtn.classList.add('bg-primary');
+                    analyzeBtn.classList.remove('bg-on-tertiary-container', 'text-white');
+                }, 1000);
+            }, 1500);
+        });
+
+        // Simple smooth scroll reveal logic
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Initialize state
+        analyzeBtn.disabled = true;
+    </script>
+</body></html>
