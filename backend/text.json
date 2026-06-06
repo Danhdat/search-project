@@ -1,0 +1,79 @@
+{
+    "analysis": {
+        "brand": "Balenciaga",
+        "model": "Hourglass Mini Top Handle Bag",
+        "color": "Pink Glitter",
+        "material": "Glitter-coated leather",
+        "category": "Handbag",
+        "search_keywords": [
+            "Balenciaga Hourglass",
+            "Balenciaga Mini Bag",
+            "Pink Glitter Handbag",
+            "Balenciaga Top Handle Bag",
+            "Balenciaga Crossbody",
+            "Luxury Pink Bag",
+            "Glitter Shoulder Bag"
+        ],
+        "similar_style_keywords": [
+            "Structured Top Handle Bag",
+            "Curved Silhouette Bag",
+            "Statement Evening Bag",
+            "Sparkly Mini Bag",
+            "Glamorous Handbag",
+            "Party Clutch",
+            "Metallic Pink Bag"
+        ]
+    },
+    "results": [
+        {
+            "site": "www.balenciaga.com",
+            "keyword_used": "Balenciaga Hourglass",
+            "product_url": "https://www.balenciaga.com/en-us/hourglass-handbag-small-black-5935461QJ4M1000.html"
+        },
+        {
+            "site": "www.ssense.com",
+            "keyword_used": "Balenciaga Hourglass",
+            "product_url": "https://www.ssense.com/en-us/women/product/balenciaga/white-small-hourglass-bag/12304031"
+        },
+        {
+            "site": "www.net-a-porter.com",
+            "keyword_used": "Balenciaga Hourglass",
+            "product_url": "https://www.net-a-porter.com/en-us/shop/product/balenciaga/accessories/shoulder-bags/hourglass-croc-effect-patent-leather-shoulder-bag/1647597282869501"
+        },
+        {
+            "site": "www.farfetch.com",
+            "keyword_used": "Balenciaga Hourglass",
+            "product_url": "https://www.farfetch.com/shopping/women/balenciaga-xs-hourglass-top-handle-bag-item-18872019.aspx"
+        },
+        {
+            "site": "www.net-a-porter.com",
+            "keyword_used": "Balenciaga Hourglass",
+            "product_url": "https://www.net-a-porter.com/en-us/shop/product/balenciaga/accessories/totes/hourglass-small-croc-effect-leather-tote/1647597282869498"
+        },
+        {
+            "site": "www.farfetch.com",
+            "keyword_used": "Balenciaga Mini Bag",
+            "product_url": "https://www.farfetch.com/shopping/women/balenciaga-crush-mini-bag-item-19942733.aspx"
+        },
+        {
+            "site": "www.farfetch.com",
+            "keyword_used": "Balenciaga Mini Bag",
+            "product_url": "https://www.farfetch.com/shopping/women/balenciaga-mini-le-city-shoulder-bag-item-20684784.aspx"
+        },
+        {
+            "site": "www.farfetch.com",
+            "keyword_used": "Balenciaga Mini Bag",
+            "product_url": "https://www.farfetch.com/shopping/women/balenciaga-mini-hourglass-crossbody-bag-item-19810842.aspx"
+        },
+        {
+            "site": "www.ssense.com",
+            "keyword_used": "Balenciaga Mini Bag",
+            "product_url": "https://www.ssense.com/en-us/women/product/balenciaga/black-rodeo-mini-bag/251342F046010"
+        },
+        {
+            "site": "www.mytheresa.com",
+            "keyword_used": "Balenciaga Mini Bag",
+            "product_url": "https://www.mytheresa.com/en-us/balenciaga-hourglass-mini-leather-shoulder-bag-black-p00617631.html"
+        }
+    ]
+}

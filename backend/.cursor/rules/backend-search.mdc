@@ -1,0 +1,13 @@
+---
+alwaysApply: true
+---
+
+- /services : Chứa toàn bộ business logic 
+- /controllers : Parse request (JSON body, query params, path params) ,Gọi service, Format response (JSON + HTTP status code) ,Không chứa logic nghiệp vụ 
+
+Về README.md
+- **SAU MỖI LẦN THAY ĐỔI CODE** (thêm tính năng mới, sửa cấu trúc, thay đổi quy trình), bạn **PHẢI CẬP NHẬT** file `README.md` với nội dung:
+  - Cách thực hiện (các bước chạy, lệnh cần gõ)
+  - Luồng quy trình
+- `README.md` phải luôn ở **trạng thái đúng với code hiện tại**.
+- Những thay đổi vừa được thực hiện (dưới dạng changelog) được khi vào `CHANGELOG.md`
